@@ -1,0 +1,17 @@
+@mixin transition($timing) {
+	-webkit-transition:all $timing ease;
+       -moz-transition:all $timing ease;
+    	 -o-transition:all $timing ease;
+    		transition:all $timing ease;
+}
+
+@mixin nav-id-style($colour) {
+	border-left: 5px solid $colour;
+	background: linear-gradient(to right, $colour 50%, $light-gray 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    @include transition($nav-timing);
+    &:hover {
+    	background-position:left bottom;
+    }
+}

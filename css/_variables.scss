@@ -1,0 +1,20 @@
+/* Colour Variables */
+
+$gray: hsla(0, 0%, 14%, 1);
+$light-gray: lighten($gray, 2.5%);
+
+$home: rgba(0,160,176,1);
+$about: rgba(106,74,60,1);
+$work: rgba(204,51,63,1);
+$blog: rgba(235,104,65,1);
+$contact: rgba(237,201,81,1);
+
+/* Nav Transitions Variable */
+
+$nav-timing: 0.75s;
+
+/* Size Variables */
+
+$sidebar-width: 17vw;
+
+$icon-div: 175px;

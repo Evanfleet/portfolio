@@ -1,0 +1,141 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+    font-family: Prime;
+    src: url(/fonts/prime/Prime_Regular.otf);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f4f4f4;
+}
+
+/* Navigation Styles */
+aside {
+	padding: 10px 0;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: $sidebar-width;
+	background: $gray;
+	z-index: 1020;
+	h1, h3 {
+		color: #fff;
+		text-align: center;
+		font-family: Prime;
+	}
+	h1 {
+		font-size: 3em;
+	}
+	h3 {
+		font-size: 1em;
+		margin-top: -3vh;
+	}
+	span {
+		padding: 0 7.5%;
+		font-size: 0.75em;
+		line-height: 0.75em;
+		vertical-align: middle;
+	}
+}
+
+nav {
+	margin-left: -2.4vw;
+	padding-top: 5%;
+	width: 100%;
+	ul {
+		list-style-type: none;
+		width: 100%;
+	}
+	li {
+		background-color: $gray;
+		height: 4vh;
+		line-height: 4vh;
+		margin-bottom: 0.5vh;
+		width: 98.5%;
+		a {
+			text-decoration: none;
+			color: #fff;
+			text-align: center;
+			margin-left: -1%;
+			font-size: 1.15em;
+			display: block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#li-home {
+    @include nav-id-style($home);
+}
+
+#li-about {
+	@include nav-id-style($about);
+}
+
+#li-work {
+	@include nav-id-style($work);
+}
+
+#li-blog {
+	@include nav-id-style($blog);
+}
+
+#li-contact {
+	@include nav-id-style($contact);
+}
+
+/* Main Content Styles */
+main {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: $sidebar-width;
+	right: 0px;
+	padding: 0;
+	overflow: auto;
+	img {
+		border-bottom: 0.5vh solid $gray;
+	}
+}
+
+.overview-skills {
+	width: 80%;
+	margin: 2% 10% 0 10%;
+}
+
+.skill {
+	width: 25%;
+	padding: 0 4%;
+	float: left;
+	h3 {
+		font-family: Prime;
+	}
+	h3, p {
+		text-align: center;
+	}
+}
+
+.icon {
+	width: $icon-div;
+	height: $icon-div;
+	border-radius: $icon-div;
+	margin: auto;
+	background: #CCC;
+	text-align: center;
+	display: table;
+	i {
+		color: #fff;
+		vertical-align: middle;
+		display: table-cell;
+	}
+}
+
